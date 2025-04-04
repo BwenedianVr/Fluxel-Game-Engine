@@ -155,57 +155,6 @@ function loadStarterProject() {
 
 window.addEventListener('DOMContentLoaded', () => {
   createTopBar()
-
-  const editor = document.createElement('div')
-  editor.id = 'editor'
-
-  const left = document.createElement('div')
-  left.id = 'left-tab'
-  left.innerHTML = `
-    <h3>Search Files</h3>
-    <input type="text" id="file-search" placeholder="Search..." />
-    <h3>Assets</h3>
-    <ul id="asset-list">
-      <li><img src="editorIcons/folder.png" alt="Folder" /> Assets (undeletable)</li>
-    </ul>
-  `
-
-  const right = document.createElement('div')
-  right.id = 'right-tab'
-  right.innerHTML = `
-    <h3>Object Data</h3>
-    <p id="obj-name">Name: </p>
-    <p id="obj-x">X: </p>
-    <p id="obj-y">Y: </p>
-    <p id="obj-scripts">Scripts: </p>
-  `
-
-  const main = document.createElement('div')
-  main.id = 'main-area'
-
-  const canvas = document.createElement('canvas')
-  canvas.id = 'game-canvas'
-  canvas.width = 800
-  canvas.height = 600
-  main.appendChild(canvas)
-
-  const bottom = document.createElement('div')
-  bottom.id = 'bottom-bar'
-  bottom.innerHTML = `
-    <h3>Object Folders</h3>
-    <ul id="object-folder-list">
-      <li>No objects loaded</li>
-    </ul>
-  `
-
-  main.appendChild(bottom)
-
-  editor.appendChild(left)
-  editor.appendChild(main)
-  editor.appendChild(right)
-
-  document.body.appendChild(editor)
-
   drawGUI()
   loadStarterProject()
 })
