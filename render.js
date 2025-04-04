@@ -61,11 +61,16 @@ function handleMouseDrag(e) {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
 
-    worldOffsetX = dragStartX - mouseX;
-    worldOffsetY = dragStartY - mouseY;
+    // Update the world offsets based on the difference in mouse position
+    worldOffsetX = mouseX - dragStartX + worldOffsetX;
+    worldOffsetY = mouseY - dragStartY + worldOffsetY;
+
+    dragStartX = mouseX;
+    dragStartY = mouseY;
 
     drawStage();
 }
+
 // Start dragging the world
 function startDragging(e) {
     isDragging = true;
