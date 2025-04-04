@@ -81,12 +81,20 @@ function createTopBar() {
     </div>
   `;
   document.body.prepend(topBar);
+  // Handle dropdown toggle
+  topBar.querySelector(".dropbtn").addEventListener("click", () => {
+    const dropdown = document.querySelector(".dropdown-content");
+    dropdown.style.display =
+      dropdown.style.display === "block" ? "none" : "block";
+  });
 }
 
 // Close the options dropdown
 function closeOptions() {
-  // Logic to close dropdown or menu
+  const dropdown = document.querySelector('.dropdown-content')
+  if (dropdown) dropdown.style.display = 'none'
 }
+
 
 // Create left side tab for searching files and assets
 function createLeftTab() {
