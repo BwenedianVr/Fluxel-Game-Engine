@@ -129,3 +129,17 @@ body {
     background-color: #2d2d2d;
     flex-grow: 1; /* Allows content to take the remaining space */
 }
+/* Scene Tab Styles */
+.scene-tab {
+    position: fixed;
+    top: 40px; /* Below the top bar */
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Dark background for the scene tab */
+    height: 30px; /* Thin tab */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0; /* Behind all other tabs */
+    border-bottom: 3px solid #222; /* Thin darker border */
+}
