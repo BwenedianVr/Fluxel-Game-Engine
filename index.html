@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Beta Editor</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godot GUI Clone</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="left-tab">
-  
+    <div class="container">
+        <div class="sidebar">
+            <button class="btn">New Project</button>
+            <button class="btn">Open Project</button>
+            <button class="btn">Settings</button>
+        </div>
+        <div class="main-content">
+            <h1>Godot Editor</h1>
+            <div class="toolbar">
+                <button class="btn">Play</button>
+                <button class="btn">Pause</button>
+                <button class="btn">Stop</button>
+            </div>
+            <div class="file-tabs">
+                <div class="tab">Scene 1</div>
+                <div class="tab">Scene 2</div>
+                <div class="tab">Script</div>
+            </div>
+            <div class="viewport">
+                <p>Viewport area (place for your game scene or editor workspace)</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
