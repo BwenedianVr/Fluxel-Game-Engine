@@ -84,7 +84,7 @@ body {
 .right-tab {
     position: fixed;
     top: 40px; /* Start just below the top bar */
-    bottom: 100px; /* The bottom panel is now between the right tab and the content */
+    bottom: 0px; /* The bottom panel is now between the right tab and the content */
     right: 0;
     width: 200px;
     background-color: #444; /* Darker gray for the right panel */
