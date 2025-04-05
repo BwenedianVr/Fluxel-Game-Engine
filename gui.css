@@ -143,3 +143,13 @@ body {
     z-index: 0; /* Behind all other tabs */
     border-bottom: 3px solid #222; /* Thin darker border */
 }
+/* Ensure the canvas is correctly layered behind everything */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Let clicks pass through */
+    z-index: -1; /* Make sure it's behind all other elements */
+}
