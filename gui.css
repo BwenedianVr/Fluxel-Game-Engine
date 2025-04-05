@@ -76,7 +76,7 @@ body {
     flex-direction: column;
     border-right: 3px solid #222; /* Lighter gray outline */
     overflow-y: auto;
-    z-index: 1
+    z-index: 2;
 }
 
 .scene-tree-label {
@@ -99,7 +99,7 @@ body {
     flex-direction: column;
     border-left: 3px solid #222; /* Lighter gray outline */
     overflow-y: auto;
-    z-index: 3
+    z-index: 4;
 }
 
 .inspector-label {
@@ -118,7 +118,7 @@ body {
     background-color: #444; /* Lighter gray for bottom panel */
     height: 200px; /* Bulkier height */
     border-top: 3px solid #222; /* Darker gray outline */
-    z-index: 2
+    z-index: 3;
 }
 
 /* Content Section */
@@ -135,21 +135,33 @@ body {
     top: 40px; /* Below the top bar */
     left: 0;
     width: 100%;
-    background-color: #333; /* Dark background for the scene tab */
+    background-color: #444; /* Dark background for the scene tab */
     height: 30px; /* Thin tab */
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 0; /* Behind all other tabs */
+    z-index: 1; /* Behind all other tabs */
     border-bottom: 3px solid #222; /* Thin darker border */
 }
-/* Ensure the canvas is correctly layered behind everything */
+
 canvas {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    pointer-events: none; /* Let clicks pass through */
-    z-index: -1; /* Make sure it's behind all other elements */
+    pointer-events: none; /* Make the canvas non-interactive */
+    z-index: 0; /* Keep canvas behind other elements */
 }
+
+#event-capture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; /* This makes the capture layer above the canvas */
+    background: transparent;
+    pointer-events: auto; /* This ensures the capture layer receives events */
+}
+
