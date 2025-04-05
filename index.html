@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Godot GUI Clone</title>
+    <title>Top Bar with Left and Right Tabs and Bottom Tab</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <button class="btn">New Project</button>
-            <button class="btn">Open Project</button>
-            <button class="btn">Settings</button>
+    <div class="topbar">
+        <!-- Left Buttons -->
+        <div class="left">
+            <button class="topbar-btn">Edit</button>
+            <button class="topbar-btn">Project</button>
+            <button class="topbar-btn">About</button>
         </div>
-        <div class="main-content">
-            <h1>Godot Editor</h1>
-            <div class="toolbar">
-                <button class="btn">Play</button>
-                <button class="btn">Pause</button>
-                <button class="btn">Stop</button>
-            </div>
-            <div class="file-tabs">
-                <div class="tab">Scene 1</div>
-                <div class="tab">Scene 2</div>
-                <div class="tab">Script</div>
-            </div>
-            <div class="viewport">
-                <p>Viewport area (place for your game scene or editor workspace)</p>
-            </div>
+
+        <!-- Middle Buttons -->
+        <div class="middle">
+            <button class="topbar-btn">Scene</button>
+            <button class="topbar-btn">Scripts</button>
+        </div>
+
+        <!-- Right Buttons -->
+        <div class="right">
+            <button class="topbar-btn">Run</button>
+            <button class="topbar-btn">Stop</button>
         </div>
     </div>
+
+    <!-- Left Tab Section -->
+    <div class="left-tab">
+        <div class="scene-tree-label">Scene Tree</div>
+    </div>
+
+    <!-- Right Tab Section -->
+    <div class="right-tab">
+        <div class="inspector-label">Inspector</div>
+    </div>
+
+    <!-- Bottom Tab Section (no label, bulkier) -->
+    <div class="bottom-tab"></div>
+    <div class="scene-tab"></div>
 </body>
 </html>
