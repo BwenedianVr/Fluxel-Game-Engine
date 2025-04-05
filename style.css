@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e;
+    color: #f1f1f1;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #1e1e1e;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .btn {
+    background-color: #444;
+    color: #f1f1f1;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.sidebar .btn:hover {
+    background-color: #666;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.main-content h1 {
+    color: #f1f1f1;
+    font-size: 2em;
+}
+
+.toolbar {
+    margin-bottom: 20px;
+}
+
+.toolbar .btn {
+    background-color: #444;
+    color: #f1f1f1;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.toolbar .btn:hover {
+    background-color: #666;
+}
+
+.file-tabs {
+    margin-bottom: 20px;
+}
+
+.tab {
+    display: inline-block;
+    background-color: #333;
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tab:hover {
+    background-color: #444;
+}
+
+.viewport {
+    background-color: #1f1f1f;
+    padding: 20px;
+    min-height: 300px;
+    color: #aaa;
+}
